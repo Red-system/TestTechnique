@@ -1,14 +1,39 @@
 @use 'src/styles/vars';
 
-.page {
-  font-family: vars.$global-font;
-  height: 90vh;
-  width: 70em;
-  // background-color: red;
-  display: flex;
+.inAppPage {
+}
 
+.page {
+  height: 90vh;
+  width: 27em;
+
+  margin: auto;
+
+  font-family: vars.$global-font;
   &__pic {
-    height: 55%;
+    height: 50%;
+
+    text-align: center;
+
+    &__image {
+      object-fit: contain;
+      height: auto;
+      max-width: 100%;
+      position: relative;
+      margin: 0px 0px;
+    }
+    &__title {
+      display: inline-block;
+      position: absolute;
+      top: 35%;
+      left: 47%;
+      font-size: 2.8em;
+      padding: 5px 5px;
+      background-color: white;
+      // width: auto;
+      // max-width: 50%;
+      background-size: contain;
+    }
     // background-color: vars.$test-color;
   }
   &__mark {
@@ -16,7 +41,8 @@
     // background-color: slateblue;
     display: flex;
     justify-content: space-evenly;
-    padding: 0.8em 0em;
+    // padding: 0.8em 0em;
+    margin: 0px 0px 35px 0px;
 
     &__circle {
       background-color: grey;
@@ -26,55 +52,55 @@
     }
   }
   &__text {
-    font-size: 1.4em;
-    height: 15%;
+    font-size: 1.5em;
+    height: 45%;
     // background-color: royalblue;
     text-align: left;
-    margin: 1em 0em;
+    margin: 15px 0px;
   }
+
   &__link {
-    height: 10%;
-    padding: 5% 15%;
+    height: 5%;
+
     // background-color: seagreen;
     color: orangered;
     text-align: right;
     font-size: 20px;
     font-weight: thin;
-    &__prev {
-      cursor: pointer;
-      position: absolute;
 
-      width: auto;
-      margin-top: -22px;
-      margin-left: -445px;
-      padding: 16px;
+    &__button {
+      height: 100%;
+      position: relative;
+      text-align: justify;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      &__prev {
+        cursor: pointer;
+        position: absolute;
+        display: inline-block;
+        width: auto;
+        margin-top: 15px;
+        margin-left: -175px;
+        padding: 16px;
 
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
-    }
-    &__next {
-      cursor: pointer;
-      position: absolute;
+        font-size: 18px;
 
-      width: auto;
-      margin-top: -22px;
-      padding: 16px;
+        user-select: none;
+      }
+      &__next {
+        cursor: pointer;
+        position: absolute;
 
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-      user-select: none;
+        width: auto;
+        margin-top: -5px;
+        margin-left: 160px;
+
+        font-size: 18px;
+
+        user-select: none;
+      }
     }
   }
-}
-
-.page {
-  // display: none;
-
-  &__link {
-  }
+  // background-color: red;
 }

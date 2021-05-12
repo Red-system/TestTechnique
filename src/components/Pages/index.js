@@ -14,18 +14,14 @@ const Pages = ({ content }) => {
   //On récupère l'élément courant
   const currentPageContent = content[index];
 
-  // On defini ici que le state de base est arrivé sur la fin de l'array alors il revient a 0.
-  //(les elements d'un array commence leur numérotation a 0 d'ou le num-1)
-  // Sinon il rajoute 1 au curState
+  // On defini ici que l'index est arrivé sur la fin de l'array alors il revient a 0.
+  // Sinon il rajoute 1 a l'index
 
   const nextSlide = () => {
     setIndex(index === num - 1 ? 0 : index + 1);
   };
 
-  //Si le curState est au début de l'array alors on le fais revenir au début. Sinon on enlève 1
-  // const prevSlide = () => {
-  //   setCurState(curState === 1 ? 2 : curState - 1);
-  // };
+  //Si l'index est au début de l'array alors on le renvoie a la fin. Sinon on enlève 1
 
   const prevSlide = () => {
     setIndex(index === 0 ? num - 1 : index - 1);
@@ -37,7 +33,7 @@ const Pages = ({ content }) => {
   }
 
   return (
-    <div>
+    <div className="inAppPage">
       <div className="page">
         {content.map((pageContent) => {
           return (
@@ -50,11 +46,9 @@ const Pages = ({ content }) => {
               key={pageContent.id}
             >
               {pageContent.id === currentPageContent.id && (
-                <div>
-                  <div className="page__pic">
-                    {pageContent.image}
-                    <h1 className="page__pic__title">{pageContent.title}</h1>
-                  </div>
+                <div className="page__pic">
+                  <img className="page__pic__image" src={pageContent.image} />
+                  <h1 className="page__pic__title">{pageContent.title}</h1>
 
                   <div className="page__mark">
                     <div className="page__mark__circle" />
@@ -66,17 +60,21 @@ const Pages = ({ content }) => {
           );
         })}
         {/* end div page */}
-      </div>
 
-      <div className="page__link">
-        <a className="page__link__prev" onClick={prevSlide}>
-          <BsChevronCompactLeft className="page__link__arrow" />
-          Précédent
-        </a>
-        <a className="page__link__next" onClick={nextSlide}>
-          Suivant
-          <BsChevronCompactRight className="page__link__arrow" />
-        </a>
+        <div className="page__link">
+          <div className="page__link__button">
+            <a className="page__link__button__prev" onClick={prevSlide}>
+              <BsChevronCompactLeft className="page__link__button__arrow" />
+              Précédent
+            </a>
+          </div>
+          <div className="page__link__button">
+            <a className="page__link__button__next" onClick={nextSlide}>
+              Suivant
+              <BsChevronCompactRight className="page__link__button__arrow" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
