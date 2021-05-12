@@ -1,0 +1,80 @@
+@use 'src/styles/vars';
+
+.page {
+  font-family: vars.$global-font;
+  height: 90vh;
+  width: 70em;
+  // background-color: red;
+  display: flex;
+
+  &__pic {
+    height: 55%;
+    // background-color: vars.$test-color;
+  }
+  &__mark {
+    height: 5%;
+    // background-color: slateblue;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.8em 0em;
+
+    &__circle {
+      background-color: grey;
+      height: 15px;
+      width: 15px;
+      border-radius: 90px;
+    }
+  }
+  &__text {
+    font-size: 1.4em;
+    height: 15%;
+    // background-color: royalblue;
+    text-align: left;
+    margin: 1em 0em;
+  }
+  &__link {
+    height: 10%;
+    padding: 5% 15%;
+    // background-color: seagreen;
+    color: orangered;
+    text-align: right;
+    font-size: 20px;
+    font-weight: thin;
+    &__prev {
+      cursor: pointer;
+      position: absolute;
+
+      width: auto;
+      margin-top: -22px;
+      margin-left: -445px;
+      padding: 16px;
+
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    &__next {
+      cursor: pointer;
+      position: absolute;
+
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+  }
+}
+
+.page {
+  // display: none;
+
+  &__link {
+  }
+}
