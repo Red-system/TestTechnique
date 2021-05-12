@@ -4,8 +4,8 @@
 }
 
 .page {
-  height: 90vh;
-  width: 27em;
+  height: 100%;
+  width: 29em;
 
   margin: auto;
 
@@ -32,6 +32,7 @@
       background-color: white;
       // width: auto;
       // max-width: 50%;
+
       background-size: contain;
     }
     // background-color: vars.$test-color;
@@ -56,47 +57,29 @@
     height: 45%;
     // background-color: royalblue;
     text-align: left;
-    margin: 15px 0px;
+    margin: 30px 0px;
   }
 
-  &__link {
+  &__links {
     height: 5%;
 
     // background-color: seagreen;
     color: orangered;
-    text-align: right;
+    padding: 50px 0px 0px 0px;
     font-size: 20px;
     font-weight: thin;
-
-    &__button {
-      height: 100%;
-      position: relative;
-      text-align: justify;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+    &__link {
       &__prev {
         cursor: pointer;
-        position: absolute;
-        display: inline-block;
-        width: auto;
-        margin-top: 15px;
-        margin-left: -175px;
-        padding: 16px;
-
-        font-size: 18px;
 
         user-select: none;
       }
       &__next {
         cursor: pointer;
-        position: absolute;
-
-        width: auto;
-        margin-top: -5px;
-        margin-left: 160px;
-
-        font-size: 18px;
 
         user-select: none;
       }

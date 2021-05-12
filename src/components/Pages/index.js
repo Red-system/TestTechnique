@@ -61,15 +61,15 @@ const Pages = ({ content }) => {
         })}
         {/* end div page */}
 
-        <div className="page__link">
-          <div className="page__link__button">
-            <a className="page__link__button__prev" onClick={prevSlide}>
+        <div className="page__links">
+          <div className="page__links__link">
+            <a className="page__links__link__prev" onClick={prevSlide}>
               <BsChevronCompactLeft className="page__link__button__arrow" />
               Précédent
             </a>
           </div>
-          <div className="page__link__button">
-            <a className="page__link__button__next" onClick={nextSlide}>
+          <div className="page__links__link">
+            <a className="page__links__link__next" onClick={nextSlide}>
               Suivant
               <BsChevronCompactRight className="page__link__button__arrow" />
             </a>
